@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="signin.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h2 id="formTitle">Sign In</h2>
+
+            <!-- 🔹 Toggle Buttons for Login & Signup -->
+            <div class="toggle-buttons">
+                <button id="signInBtn" class="active">Sign In</button>
+                <button id="signUpBtn">Sign Up</button>
+            </div>
+
+            <!-- 🔹 Sign In Form -->
+            <form id="signInForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- 🔹 Sign Up Form (Hidden Initially) -->
+            <form id="signUpForm" class="hidden">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword('signupPassword')">👁️</span>
+                </div>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+
+            <!-- 🔹 Forgot Password Link -->
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+    </div>
+
+    <script src="signin.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

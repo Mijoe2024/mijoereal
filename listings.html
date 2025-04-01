@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijoe Real Estate Listings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="list-style.css">
+    <script defer src="listing-script.js"></script>
+</head>
+<body>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">Listings</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    <div class="container">
+        <h1>🏡 Real Estate Listings</h1>
+        <!-- Navbar -->
+        <header>
+                <!-- Search Bar -->
+            
+            <!-- Filter Buttons -->
+            <h2>Find Your Dream Home</h2>
+            <div class="search-bar">
+                <input type="text" class="search-box" placeholder="Search by location, price, type...">
+            </div>
+            <nav>
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="Self-Con">Self Con</button>
+                <button class="filter-btn" data-category="2-Bed-Room-Flat">2 Bed Room Flat</button>
+                <button class="filter-btn" data-category="3-Bed-Room-Flat">3 Bed Room Flat</button>
+                <button class="filter-btn" data-category="4-Bed-Room-Flat">4 Bed Room Flat</button>
+            </nav>
+        </header>
+
+        <!-- Listings -->
+        <section class="listings">
+            <!-- Self Con Houses -->
+            <div class="property-card" data-category="Self-Con">
+                <video src="./videos/VID-20250228-WA0002.mp4" alt="House 1" controls></video>
+                <h3>A Room Self Con</h3>
+                <div class="details-section hidden">
+                    <ul>
+                        <p><b>Facilities: </b><br>
+                        <li>Tiled</li>
+                        <li>Full POP</li>
+                        <li>Running Water</li>
+                        <li>Fenced and Gated</li>
+                        <li>Good Road Access</li>
+                        <li>Spacious Compound</li>
+                    </ul>
+                </div>
+                <b> Location:</b>📍 Olorunsogo, Ado-Ekiti. Ekiti State </p>
+                <div class="buttons">
+                    <button class="view-details">View Details</button>
+                    <a href="#" class="contact-btn">Contact Agent</a>
+                </div>
+            </div>
+
+            <!-- 2-Bed-Room-Flat -->
+            <div class="property-card" data-category="2-Bed-Room-Flat">
+                <video src="./videos/Mijoe Prison Road Property.mp4" alt="House 1"  controls></video>
+                    <h3>2 Bedroom Flat</h3>
+                    <div class="details-section hidden">
+                        <p><b>Facilities: </b><br>
+                        <ul>
+                            <li>Tiled</li>
+                            <li>Full POP</li>
+                            <li>Running Water</li>
+                            <li>Fenced and Gated</li>
+                            <li>Good Road Access</li>
+                            <li>Spacious Compound</li>
+                        </ul>
+                    </div>
+                    <b> Location:</b>📍 Very close to army check point along afao road, Ado-Ekiti. Ekiti State.</p>
+                    <div class="buttons">
+                        <button class="view-details">View Details</button>
+                        <a href="#" class="contact-btn">Contact Agent</a>
+                    </div>
+            </div>
+
+            <!-- 3 Bed room flat -->
+            <div class="property-card" data-category="3-Bed-Room-Flat">
+                <video src="./videos/Mijoe Real Estate CBN Property.mp4" alt="House 1"  controls></video>
+                    <h3>3 Bedroom Flat</h3>
+                    <div class="details-section hidden">
+                        <p><b>Facilities: </b><br>
+                        <ul>
+                            <li>Tiled</li>
+                            <li>Full POP</li>
+                            <li>Running Water</li>
+                            <li>Fenced and Gated</li>
+                            <li>Floored Compound</li>
+                            <li>Conducive Enviromnet</li>
+                        </ul>
+                    </div>
+                    <b> Location:</b>📍 Ile-Anu Quaters Behind CBN Along Iyin Road, Ado-Ekiti. Ekiti State</p>
+                    <div class="buttons">
+                        <button class="view-details">View Details</button>
+                        <a href="#" class="contact-btn">Contact Agent</a>
+                    </div>
+            </div>
+        </section>
+
+        <script>
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function() {
+                    const detailsSection = this.closest('.property-card').querySelector('.details-section');
+                    detailsSection.classList.toggle('hidden');
+                });
+            });
+        </script>
+
+    </div>
+</html>
